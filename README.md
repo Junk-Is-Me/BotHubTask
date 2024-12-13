@@ -16,12 +16,14 @@
 Запуск бота происзодится с помощью php.bot.php
 
 Таблица для бота создается с помощью команды
+
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     telegram_id BIGINT UNIQUE NOT NULL,
     user_name VARCHAR(255) DEFAULT NULL,
     balance DECIMAL(10, 2) NOT NULL DEFAULT 0.00
 ) ENGINE=InnoDB;
+
 Или же во время первого выполнения скрипта
 
 Для работы и тестирования бота используется бесконечный цикл, на продакшн версии конечно же нужно использовать веб-хуки.
